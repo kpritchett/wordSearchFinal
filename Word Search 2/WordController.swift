@@ -36,5 +36,6 @@ class WordController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         myAlert.addAction(cancelAction)
     }
+    }
+    
 }
-
