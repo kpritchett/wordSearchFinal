@@ -68,7 +68,11 @@
                                             </connections>
                                         </barButtonItem>
                                         <rightBarButtonItems>
-                                            <barButtonItem systemItem="edit" id="FLM-ja-HDw"/>
+                                            <barButtonItem systemItem="edit" id="FLM-ja-HDw">
+                                                <connections>
+                                                    <action selector="editButtonTapped:" destination="d33-T7-yUf" id="ZDO-Y5-Abg"/>
+                                                </connections>
+                                            </barButtonItem>
                                             <barButtonItem systemItem="add" id="ERo-0f-TxE"/>
                                         </rightBarButtonItems>
                                     </navigationItem>

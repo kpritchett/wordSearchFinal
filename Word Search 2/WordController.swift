@@ -29,5 +29,12 @@ class WordController: UIViewController, UITableViewDataSource, UITableViewDelega
         myCell.textLabel!!.text = "Insert Word"
         return myCell as! UITableViewCell
     }
+    @IBAction func editButtonTapped(sender: AnyObject)
+    {
+        let myAlert = UIAlertController(title: "Add Words", message: nil, preferredStyle: .Alert)
+        myAlert.addTextFieldWithConfigurationHandler{ (wordOne) -> Void in
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        myAlert.addAction(cancelAction)
+    }
 }
 
