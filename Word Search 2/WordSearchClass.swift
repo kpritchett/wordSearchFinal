@@ -4,17 +4,17 @@
 //
 //  Created by mphipps on 4/22/16.
 //  Copyright © 2016 kpritchett. All rights reserved.
-// Phipps test
+//
 
 import UIKit
 
 class WordSearchClass: NSObject
 {
-    var lettersArray: [[String]] = []
-    var wordsArray: [String] = []
+    var wordSearch: [[String]] = []
+    var wordsArray: [Word] = []
     var wordsDirections: [Int] = []
     
-    init(WordsArray: [String])
+    init(WordsArray: [Word])
     {
         super.init()
         wordsArray = WordsArray
@@ -37,56 +37,82 @@ class WordSearchClass: NSObject
         let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         
         // Determines size of word search based on How many words are imputed
-        var width = 9
-        var height = 16
+        sortWordsArray()
+        let column = 14
+        let row = 21
         
-        if wordsArray.count > 6
+        for var r = 0; r < row; r++
         {
-            width = 14
-            height = 21
+            var blankSpaces: [String] = []
+            for var c = 0; c < column; c++
+            {
+                //let letterPosition = Int(arc4random_uniform(26))
+                //let myRange = Range<String.Index>(start: alphabet.startIndex.advancedBy(letterPosition), end: alphabet.startIndex.advancedBy(letterPosition + 1))
+                //words.append(alphabet.substringWithRange(myRange))
+                blankSpaces.append("")
+            }
+            wordSearch.append(blankSpaces)
         }
-        
-        // This for loop gets what size the wordsearch needs to be.
         for var i = 0; i < wordsArray.count; i++
         {
-            if wordsDirections[i] == 1 || wordsDirections[i] == 10
+            var yes = false
+            while(yes == false)
             {
-                if wordsArray[i].characters.count > width
+                switch abs(wordsDirections[i])
                 {
-                    width = wordsArray[i].characters.count + 2
-                }
-                
-            }
-            else if wordsDirections[i] == 2 || wordsDirections[i] == 3 || wordsDirections[i] == 20 || wordsDirections[i] == 30
-            {
-                if wordsArray[i].characters.count > width
-                {
-                    width = wordsArray[i].characters.count + 2
-                }
-                if wordsArray[i].characters.count > height
-                {
-                    height = wordsArray[i].characters.count + 2
+                case 1:
+                    insertWordHorizontal(wordsArray[i].getWord(), Row: Int(arc4random_uniform(14)), Col: Int(arc4random_uniform(21)))
+                default:
+                    print("didnt work")
                 }
             }
-            else if wordsDirections[i] == 4 || wordsDirections[i] == 5 || wordsDirections[i] == 40 || wordsDirections[i] == 50
-            {
-                if wordsArray[i].characters.count > height
-                {
-                    height = wordsArray[i].characters.count + 2
-                }
-            }
-        }
-        for var r = 0; r < width; r++
-        {
-            var words: [String] = []
-            for var c = 0; c < height; c++
-            {
-                let letterPosition = Int(arc4random_uniform(26))
-                let myRange = Range<String.Index>(start: alphabet.startIndex.advancedBy(letterPosition), end: alphabet.startIndex.advancedBy(letterPosition + 1))
-                words.append(alphabet.substringWithRange(myRange))
-            }
-            lettersArray.append(words)
         }
         
+    }
+    
+    func insertWordHorizontal(Word: String, Row: Int, var Col: Int)
+    {
+
+        for var i = 0; i < Word.characters.count; i++
+        {
+            let myRange = Range<String.Index>(start: Word.startIndex.advancedBy(i), end: Word.startIndex.advancedBy(i + 1))
+            wordSearch[Row][Col] = Word.substringWithRange(myRange)
+            Col++
+        }
+        
+    }
+    
+    func insertVerticalWord(Word: String, Row: Int, Col: Int)
+    {
+    }
+    
+    func sortWordsArray()
+    {
+        for var i = 0; i < wordsArray.count - 1; i++
+        {
+            if(wordsArray[i].getWord().characters.count < wordsArray[i + 1].getWord().characters.count)
+            {
+                let temp = wordsArray[i]
+                wordsArray[i] = wordsArray[i + 1]
+                wordsArray[i + 1] = temp
+                i = -1
+            }
+        }
+    }
+    
+    func makeWordBackwards(Word: String) -> String
+    {
+        var wordBackWardsArray: [String] = []
+        for var i = 0; i < Word.characters.count; i++
+        {
+            let myRange = Range<String.Index>(start: Word.startIndex.advancedBy(i), end: Word.startIndex.advancedBy(i + 1))
+            wordBackWardsArray.append(Word.substringWithRange(myRange))
+        }
+        var yes = ""
+        for var i = Word.characters.count - 1; i >= 0; i--
+        {
+            yes += wordBackWardsArray[i]
+        }
+        return yes
     }
 }
