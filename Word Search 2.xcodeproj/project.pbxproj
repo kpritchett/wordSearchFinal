@@ -14,9 +14,9 @@
 		3F2AD4691CC7D30F00DC1AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2AD4671CC7D30F00DC1AE9 /* LaunchScreen.storyboard */; };
 		3F2AD4741CC7D30F00DC1AE9 /* Word_Search_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AD4731CC7D30F00DC1AE9 /* Word_Search_2Tests.swift */; };
 		3F2AD47F1CC7D30F00DC1AE9 /* Word_Search_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AD47E1CC7D30F00DC1AE9 /* Word_Search_2UITests.swift */; };
-		3F5BB9A01CCA7BED003DA0B2 /* WordSearchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BB99F1CCA7BED003DA0B2 /* WordSearchClass.swift */; };
 		3F74E0531CDA47BD0094C015 /* WordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74E0521CDA47BD0094C015 /* WordController.swift */; };
-		3F6C4B561CE239B500529B78 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C4B551CE239B500529B78 /* Word.swift */; };
+		3F79AAD11CE628CE001CFF79 /* WordSearchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79AAD01CE628CE001CFF79 /* WordSearchClass.swift */; };
+		3F79AAD31CE628ED001CFF79 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F79AAD21CE628ED001CFF79 /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +50,9 @@
 		3F2AD47A1CC7D30F00DC1AE9 /* Word Search 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word Search 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2AD47E1CC7D30F00DC1AE9 /* Word_Search_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word_Search_2UITests.swift; sourceTree = "<group>"; };
 		3F2AD4801CC7D30F00DC1AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F5BB99F1CCA7BED003DA0B2 /* WordSearchClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSearchClass.swift; sourceTree = "<group>"; };
 		3F74E0521CDA47BD0094C015 /* WordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordController.swift; sourceTree = "<group>"; };
-		3F6C4B551CE239B500529B78 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		3F79AAD01CE628CE001CFF79 /* WordSearchClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSearchClass.swift; sourceTree = "<group>"; };
+		3F79AAD21CE628ED001CFF79 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 				3F2AD4601CC7D30F00DC1AE9 /* ViewController.swift */,
 				3F2AD4621CC7D30F00DC1AE9 /* Main.storyboard */,
 				3F74E0521CDA47BD0094C015 /* WordController.swift */,
-				3F5BB99F1CCA7BED003DA0B2 /* WordSearchClass.swift */,
-				3F6C4B551CE239B500529B78 /* Word.swift */,
+				3F79AAD01CE628CE001CFF79 /* WordSearchClass.swift */,
+				3F79AAD21CE628ED001CFF79 /* Word.swift */,
 				3F2AD4651CC7D30F00DC1AE9 /* Assets.xcassets */,
 				3F2AD4671CC7D30F00DC1AE9 /* LaunchScreen.storyboard */,
 				3F2AD46A1CC7D30F00DC1AE9 /* Info.plist */,
@@ -265,11 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F5BB9A01CCA7BED003DA0B2 /* WordSearchClass.swift in Sources */,
-				3F6C4B561CE239B500529B78 /* Word.swift in Sources */,
+				3F79AAD11CE628CE001CFF79 /* WordSearchClass.swift in Sources */,
 				3F2AD4611CC7D30F00DC1AE9 /* ViewController.swift in Sources */,
 				3F2AD45F1CC7D30F00DC1AE9 /* AppDelegate.swift in Sources */,
 				3F74E0531CDA47BD0094C015 /* WordController.swift in Sources */,
+				3F79AAD31CE628ED001CFF79 /* Word.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
