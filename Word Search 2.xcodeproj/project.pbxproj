@@ -16,6 +16,7 @@
 		3F2AD47F1CC7D30F00DC1AE9 /* Word_Search_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AD47E1CC7D30F00DC1AE9 /* Word_Search_2UITests.swift */; };
 		3F5BB9A01CCA7BED003DA0B2 /* WordSearchClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BB99F1CCA7BED003DA0B2 /* WordSearchClass.swift */; };
 		3F74E0531CDA47BD0094C015 /* WordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F74E0521CDA47BD0094C015 /* WordController.swift */; };
+		3F6C4B561CE239B500529B78 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C4B551CE239B500529B78 /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F2AD4801CC7D30F00DC1AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F5BB99F1CCA7BED003DA0B2 /* WordSearchClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSearchClass.swift; sourceTree = "<group>"; };
 		3F74E0521CDA47BD0094C015 /* WordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordController.swift; sourceTree = "<group>"; };
+		3F6C4B551CE239B500529B78 /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

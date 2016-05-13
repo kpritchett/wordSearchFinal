@@ -12,11 +12,12 @@ class WordController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var myTableView: UITableView!
     
     @IBOutlet weak var editButton: UIBarButtonItem!
+    var wordSearch = WordSearchClass!.self
+    var tableViewText = [String(), String(), String(), String(), String(), String(), String(), String(), String(), String()]
     override func viewDidLoad()
     {
         myTableView.dataSource = self
         myTableView.delegate = self
-        
         
     }
     func tableView(tableView:UITableView, numberOfRowsInSection section:Int) -> Int
@@ -33,9 +34,32 @@ class WordController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         let myAlert = UIAlertController(title: "Add Words", message: nil, preferredStyle: .Alert)
         myAlert.addTextFieldWithConfigurationHandler{ (wordOne) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordTwo) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordThree) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordFour) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordFive) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordSix) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordSeven) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordEight) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordNine) -> Void in
+        }
+        myAlert.addTextFieldWithConfigurationHandler{ (wordTen) -> Void in
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         myAlert.addAction(cancelAction)
+        let addAction = UIAlertAction(title: "Confirm", style: .Default) { (addAction) -> Void in
+            tableViewText =
+            
+        }
     }
-    }
-    
 }
+
+    
